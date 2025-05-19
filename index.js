@@ -1,20 +1,29 @@
 import React from "react";
 import { createRoot } from "react-dom/client";
 
-// Creating a parent div with two child divs, each containing headings
-const parent = React.createElement("div", { id: "parent" }, [
-    React.createElement("div", { id: "child-1", key: "child-1" }, [
-        React.createElement("h1", { id: "heading-1", key: "heading-1" }, "Hello Divyanshu"),
-        React.createElement("h2", { id: "smallHeading-1", key: "smallHeading-1" }, "How are You")
-    ]),
-    React.createElement("div", { id: "child-2", key: "child-2" }, [
-        React.createElement("h1", { id: "heading-2", key: "heading-2" }, "Hello Divyanshu"),
-        React.createElement("h2", { id: "smallHeading-2", key: "smallHeading-2" }, "How are You")
-    ])
-]);
-
-// Selecting the root element and rendering the parent component
 const root = createRoot(document.getElementById("root"));
-root.render(parent);
+// React Element
+const jsxHeading = <h2 id="heading" tabIndex="5">Hello World</h2>;
+const heading = (
+    <h1 className="head" tabIndex="5">Hello World</h1>
+);
 
-console.log(parent); 
+// React Component
+const HeadEl = () => {
+    return <h1>This is Component from outside.</h1>
+};
+
+const message = "I am Darth Vader";
+// Component COmposition
+const HeadEl2 = () => (
+    <>
+        <h1>Hello World</h1>
+        <h2>{message}</h2>
+        <h3>{12 + 9 + 4}</h3>
+        <HeadEl />
+    </>
+);
+
+
+// root.render(jsxHeading);
+root.render(<HeadEl2 />);
