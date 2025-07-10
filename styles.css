@@ -9,38 +9,54 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 30px;
-    border-bottom: 1px solid #ccc;
-    background-color: #f8f8f8;
+    padding: 10px 20px;
+    /* Match res-card padding */
+    border-bottom: 1px solid #ddd;
+    /* Match res-card border */
+    background-color: white;
+    /* Match res-card background */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    /* Subtle shadow like res-card hover */
 }
 
 .logo {
-    width: 120px;
+    width: 80px;
     height: auto;
     object-fit: contain;
+    border-radius: 6px;
+    /* Match res-logo */
 }
 
 .nav-items>ul {
     display: flex;
     list-style: none;
     gap: 20px;
-    font-size: 18px;
+    font-size: 16px;
+    /* Match res-card h4 font size */
+    color: #555;
+    /* Match res-card text color */
 }
 
 .nav-items>ul>li {
-    padding: 6px 12px;
+    padding: 8px 12px;
     cursor: pointer;
-    transition: background-color 0.2s;
+    transition: all 0.3s ease;
+    /* Match res-card transition */
+    border-radius: 6px;
+    /* Match res-card */
 }
 
 .nav-items>ul>li:hover {
-    background-color: #eaeaea;
-    border-radius: 6px;
+    background-color: #f5f5f5;
+    /* Lighter than res-card hover */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    /* Match res-card hover shadow */
 }
 
 .Search {
-    padding: 20px 30px;
-    font-size: 18px;
+    padding: 20px 20px;
+    /* Match res-container padding */
+    font-size: 16px;
 }
 
 .res-container {
@@ -75,11 +91,16 @@
 
 .res-card h3 {
     margin: 10px 0 5px;
+    font-size: 18px;
+    /* Consistent with nav-items */
+    color: #333;
+    /* Slightly darker for emphasis */
 }
 
 .res-card h4 {
     margin: 4px 0;
     font-weight: normal;
+    font-size: 16px;
     color: #555;
 }
 
@@ -87,4 +108,35 @@ hr {
     margin: 10px 0;
     border: none;
     border-top: 1px solid #eee;
+}
+
+.filter {
+    padding: 10px 20px;
+    /* Match res-container padding */
+}
+
+.filter-btn {
+    padding: 8px 16px;
+    /* Consistent with nav-items */
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    /* Match res-card border */
+    border-radius: 6px;
+    /* Match res-card */
+    background-color: white;
+    /* Match res-card background */
+    color: #555;
+    /* Match res-card text */
+    font-size: 16px;
+    /* Match res-card h4 */
+    cursor: pointer;
+    transition: all 0.3s ease;
+    /* Match res-card transition */
+}
+
+.filter-btn:hover {
+    background-color: #f5f5f5;
+    /* Match nav-items hover */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    /* Match nav-items hover */
 }
