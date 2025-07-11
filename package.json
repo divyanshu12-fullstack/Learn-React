@@ -6,7 +6,7 @@
   "author": "Divyanshu",
   "type": "commonjs",
   "scripts": {
-    "start": "parcel index.html",
+    "dev": "parcel index.html",
     "build": "parcel build index.html",
     "test": "jest"
   },
