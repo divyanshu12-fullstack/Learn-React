@@ -16,7 +16,6 @@
     background-color: white;
     /* Match res-card background */
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    /* Subtle shadow like res-card hover */
 }
 
 .logo {
@@ -53,12 +52,6 @@
     /* Match res-card hover shadow */
 }
 
-.Search {
-    padding: 20px 20px;
-    /* Match res-container padding */
-    font-size: 16px;
-}
-
 .res-container {
     display: flex;
     flex-wrap: wrap;
@@ -92,9 +85,7 @@
 .res-card h3 {
     margin: 10px 0 5px;
     font-size: 18px;
-    /* Consistent with nav-items */
     color: #333;
-    /* Slightly darker for emphasis */
 }
 
 .res-card h4 {
@@ -110,15 +101,14 @@ hr {
     border-top: 1px solid #eee;
 }
 
-.filter {
-    padding: 10px 20px;
-    /* Match res-container padding */
+.btn-padding {
+    width: 200px;
 }
 
-.filter-btn {
+.basic-btn {
     padding: 8px 16px;
     /* Consistent with nav-items */
-    margin: 10px 0;
+    margin: 10px 20px;
     border: 1px solid #ddd;
     /* Match res-card border */
     border-radius: 6px;
@@ -134,9 +124,25 @@ hr {
     /* Match res-card transition */
 }
 
-.filter-btn:hover {
+.basic-btn:hover {
     background-color: #f5f5f5;
-    /* Match nav-items hover */
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    /* Match nav-items hover */
+}
+
+.search-bar {
+    display: flex;
+    justify-content: center;
+}
+
+.search-box {
+    padding: 10px;
+    margin: 20px;
+    border: 0.5px solid black;
+    border-radius: 5px;
+    width: 300px;
+    margin-top: 0px;
+}
+
+.list-items {
+    margin: 20px;
 }
