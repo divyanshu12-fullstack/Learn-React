@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import Skeleton from "react-loading-skeleton";
 import "react-loading-skeleton/dist/skeleton.css";
 
+import useOnlineStatus from "../utils/useOnlineStatus.js";
 import { BACKEND_API } from "../utils/constants";
 import RestaurantCardSkeleton from "../utils/RestaurantCardSkeleton";
 import RestaurantCard from "./RestaurantCard";
@@ -59,6 +60,10 @@ const Body = () => {
     setFiltering(newFilteringState);
     applyFilters(searchText, newFilteringState);
   };
+  const onlineStatus = useOnlineStatus();
+  if (!onlineStatus) {
+    return <h3>You are currently disconnected</h3>;
+  }
   return (
     <>
       {loading ? (
