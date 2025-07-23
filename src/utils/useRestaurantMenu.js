@@ -14,6 +14,7 @@ const useRestaurantMenu = (resId) => {
             const data = await fetch(MENU_API1 + resId + MENU_API2);
             const json = await data.json();
             setResInfo(json);
+            console.log(json);
         } catch (error) {
             console.error("Failed to fetch menu data: ", error);
             setResInfo({});

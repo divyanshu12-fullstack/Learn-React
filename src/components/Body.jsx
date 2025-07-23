@@ -5,7 +5,7 @@ import "react-loading-skeleton/dist/skeleton.css";
 import useOnlineStatus from "../utils/useOnlineStatus.js";
 import { BACKEND_API } from "../utils/constants";
 import RestaurantCardSkeleton from "../utils/RestaurantCardSkeleton";
-import RestaurantCard from "./RestaurantCard";
+import RestaurantCard, { withPromotedLabel } from "./RestaurantCard";
 import { Link } from "react-router-dom";
 
 const Body = () => {
@@ -14,6 +14,8 @@ const Body = () => {
   const [searchText, setSearchText] = useState("");
   const [loading, setLoading] = useState(true);
   const [filtering, setFiltering] = useState(false);
+
+  const RestaurantCardPromoted = withPromotedLabel(RestaurantCard);
 
   useEffect(() => {
     fetchData();
@@ -152,7 +154,11 @@ const Body = () => {
                     to={`/city/lucknow/${restaurant?.info?.id}`}
                     className="transform hover:scale-105 transition-transform duration-200"
                   >
-                    <RestaurantCard restaurant={restaurant} />
+                    {restaurant?.info?.promoted ? (
+                      <RestaurantCardPromoted restaurant={restaurant} />
+                    ) : (
+                      <RestaurantCard restaurant={restaurant} />
+                    )}
                   </Link>
                 ))}
               </div>

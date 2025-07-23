@@ -7,12 +7,10 @@ const RestaurantMenu = () => {
   const { resId } = useParams();
   const resInfo = useRestaurantMenu(resId);
 
-  // Render ShimmerMenu while data is loading
   if (resInfo === null) {
     return <ShimmerMenu />;
   }
 
-  // Safely access nested properties
   const {
     id,
     name,
